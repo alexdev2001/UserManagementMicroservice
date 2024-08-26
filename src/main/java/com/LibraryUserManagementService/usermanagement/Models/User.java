@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
@@ -24,7 +25,7 @@ public class User {
     private Long userID;
     private String username;
     private String password;
-    private String membership_date;
+    private LocalDate membership_date;
     @ManyToMany
     @JoinTable(
             name = "user_role",
